@@ -11,17 +11,26 @@ export function Portrait({
   tone,
   src,
   priority,
+  frame = true,
 }: {
   label: string;
   tone: "baby" | "current";
   src?: string;
   priority?: boolean;
+  /** Set to false for full-bleed use (no rounded corners, border, shadow, or caption chip). */
+  frame?: boolean;
 }) {
   const gradientId = `portrait-grad-${tone}`;
   const grainId = `portrait-grain-${tone}`;
 
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-[1.75rem] border border-border/60 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.45)] sm:rounded-[2rem]">
+    <div
+      className={
+        frame
+          ? "relative h-full w-full overflow-hidden rounded-[1.75rem] border border-border/60 shadow-[0_50px_100px_-40px_rgba(0,0,0,0.45)] sm:rounded-[2rem]"
+          : "relative h-full w-full overflow-hidden"
+      }
+    >
       {src ? (
         <Image
           src={src}
@@ -64,9 +73,11 @@ export function Portrait({
           <rect width="400" height="500" filter={`url(#${grainId})`} />
         </svg>
       )}
-      <span className="absolute bottom-4 left-4 rounded-full bg-black/35 px-3 py-1 font-mono text-[11px] tracking-wide text-white/85 backdrop-blur-sm sm:bottom-5 sm:left-5">
-        {label}
-      </span>
+      {frame && (
+        <span className="absolute bottom-4 left-4 rounded-full bg-black/35 px-3 py-1 font-mono text-[11px] tracking-wide text-white/85 backdrop-blur-sm sm:bottom-5 sm:left-5">
+          {label}
+        </span>
+      )}
     </div>
   );
 }
