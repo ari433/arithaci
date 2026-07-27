@@ -1,0 +1,40 @@
+export const meta = {
+  slug: "prompting-lessons",
+  title: "Everything I've learned about prompting, condensed",
+  excerpt:
+    "A working set of rules I actually use when writing prompts for production AI products — not a listicle, a field guide.",
+  date: "2026-02-18",
+  category: "AI",
+  tags: ["ai", "prompt-engineering", "guides"],
+  readingTime: "9 min read",
+};
+
+I've rewritten this article four times because the advice kept
+expiring. Models change quarterly; the underlying discipline of writing
+a good prompt hasn't changed nearly as much. Here's what's actually held
+up.
+
+## Specificity beats cleverness
+
+The best prompts I've shipped are boring. They name the exact format,
+the exact constraints, and the exact failure modes to avoid. Clever
+phrasing rarely survives contact with a different model version;
+specificity usually does.
+
+## Show, then tell
+
+Examples outperform instructions almost every time I've tested it head
+to head. If a rule can be shown with a good and a bad example, show it
+before you explain it in prose.
+
+## Treat every prompt like an interface
+
+A prompt used inside a real product isn't a message — it's an API
+contract with a probabilistic backend. That means versioning it,
+testing it against regressions, and never shipping a "quick fix" to
+production prompts without a diff review, the same way you wouldn't for
+code.
+
+More of this thinking shows up in the [AI section](/ai) and in the
+[Agjenti AI](/projects/agjenti-ai) case study, where most of these rules
+were learned the expensive way.
