@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 
 const lines = [
-  "HEY 👋 I'm Ari Thaçi.",
+  "Hey, I'm Ari Thaçi.",
   "Thank you for visiting my digital home.",
   "This website documents my journey from the first day of my life",
   "to everything I build today.",
