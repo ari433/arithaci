@@ -11,9 +11,10 @@ next-themes · cmdk
 
 ## What's implemented
 
-- **Homepage narrative** — a scroll-driven crossfade from a first photo to a
-  present-day one (`src/components/home/hero-morph.tsx`), an animated
-  intro, a timeline preview, latest writing, and an editorial sections grid.
+- **Homepage narrative** — an AI robot greeter with a mouse-reactive 3D tilt,
+  idle float, and a typewriter greeting (`src/components/home/ai-greeting-hero.tsx`),
+  followed by an animated intro, a timeline preview, latest writing, and an
+  editorial sections grid.
 - **Journal** — MDX articles with categories, tags, search, reading time,
   a scroll progress bar, an auto-generated table of contents, bookmark
   (localStorage) and share actions, related articles, and an RSS feed at
@@ -46,10 +47,8 @@ log to the server console instead of sending; analytics simply doesn't
 load) until you add real credentials. Copy `.env.example` to `.env.local`
 and fill in what you need:
 
-- **Real photos** — drop `hero-baby.jpg` / `hero-current.jpg` into
-  `public/images/` and wire them into `hero-morph.tsx` (see
-  `public/images/README.md`). Until then the hero renders a generated
-  placeholder so the layout and motion are already correct.
+- **Real photos** — the About page's photo is a generated placeholder until
+  a real one is dropped into `public/images/` (see `public/images/README.md`).
 - **Supabase** — planned home for the admin CMS, comments, and guestbook.
   Not yet wired up; needs a project + schema before those features exist.
 - **Cloudinary** — for uploaded photo/video hosting once the CMS lands.

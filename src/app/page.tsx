@@ -1,4 +1,4 @@
-import { HeroMorph } from "@/components/home/hero-morph";
+import { AiGreetingHero } from "@/components/home/ai-greeting-hero";
 import { IntroReveal } from "@/components/home/intro-reveal";
 import { StatsStrip } from "@/components/home/stats-strip";
 import { TimelinePreview } from "@/components/home/timeline-preview";
@@ -20,7 +20,7 @@ export default function Home() {
           sameAs: Object.values(siteConfig.social),
         }}
       />
-      <HeroMorph />
+      <AiGreetingHero />
       <IntroReveal />
       <StatsStrip />
       <TimelinePreview />
