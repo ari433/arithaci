@@ -1,4 +1,4 @@
-import { HeroIntro } from "@/components/home/hero-intro";
+import { HeroFirstDay } from "@/components/home/hero-first-day";
 import { IntroReveal } from "@/components/home/intro-reveal";
 import { StatsStrip } from "@/components/home/stats-strip";
 import { TimelinePreview } from "@/components/home/timeline-preview";
@@ -20,7 +20,7 @@ export default function Home() {
           sameAs: Object.values(siteConfig.social),
         }}
       />
-      <HeroIntro />
+      <HeroFirstDay />
       <IntroReveal />
       <StatsStrip />
       <TimelinePreview />

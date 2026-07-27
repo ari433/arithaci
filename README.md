@@ -11,10 +11,10 @@ next-themes · cmdk
 
 ## What's implemented
 
-- **Homepage narrative** — a clean editorial masthead hero (name, one-line
-  positioning, portrait — `src/components/home/hero-intro.tsx`), followed by
-  an animated intro, a timeline preview, latest writing, and an editorial
-  sections grid.
+- **Homepage narrative** — an opening built around Ari's actual first photo
+  (`src/components/home/hero-first-day.tsx`) and a short personal
+  reflection, followed by an animated intro, a timeline preview, latest
+  writing, and an editorial sections grid.
 - **Journal** — MDX articles with categories, tags, search, reading time,
   a scroll progress bar, an auto-generated table of contents, bookmark
   (localStorage) and share actions, related articles, and an RSS feed at
