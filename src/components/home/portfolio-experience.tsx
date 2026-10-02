@@ -9,7 +9,7 @@ const projects = [
     index: "01",
     title: "AGJENTI AI",
     eyebrow: "FOUNDER PROJECT",
-    text: "AI employee platform per biznese — Instagram, Facebook, WhatsApp dhe web. Lead capture, qualification, booking, support, multilingual flows dhe human handoff.",
+    text: "AI employee platform per biznese. Social + web conversations → leads → qualification → booking.",
     meta: ["AI AGENTS", "AUTOMATION", "SALES", "BOOKING"],
     href: "https://agjenti-ai.com",
     accent: "LIVE / BUILDING",
@@ -18,7 +18,7 @@ const projects = [
     index: "02",
     title: "AI SALES MANAGER",
     eyebrow: "US SALES OPERATION",
-    text: "Punoj remote me nje sales operation ne SHBA ne workflows per AI sales management, QA, daily operations dhe multi-agent systems. Fokus: sistemi me ndihmu ekipin me punu me mire, jo vec me u dok mire ne demo.",
+    text: "AI sales workflows, QA, daily operations dhe multi-agent systems per nje US sales operation.",
     meta: ["MULTI-AGENT", "QA", "WORKFLOWS", "OPS"],
     accent: "CONFIDENTIAL",
   },
@@ -26,7 +26,7 @@ const projects = [
     index: "03",
     title: "AI-BIBLIOTEKA",
     eyebrow: "AI PRODUCT",
-    text: "Platforme per learning/productivity me document parsing, citations reale, flashcards, quiz, chat me burime dhe RAG-style workflows.",
+    text: "Learning product me document parsing, real citations, flashcards, quiz, source chat dhe RAG workflows.",
     meta: ["RAG", "PGVECTOR", "SUPABASE", "PRODUCT"],
     accent: "SHIPPED / ITERATING",
   },
@@ -34,7 +34,7 @@ const projects = [
     index: "04",
     title: "AI RECEPTIONIST",
     eyebrow: "AUTOMATION SYSTEM",
-    text: "Voice + chat reception, lead handling, qualification, booking dhe handoff. Ndertohet rreth procesit real te biznesit, jo rreth nje prompti te vetem.",
+    text: "Voice + chat reception per leads, qualification, booking dhe human handoff.",
     meta: ["VOICE", "CHAT", "LEADS", "BOOKING"],
     accent: "EXPERIMENT / CLIENT USE",
   },
@@ -42,7 +42,7 @@ const projects = [
     index: "05",
     title: "CLIENT BUILDS",
     eyebrow: "PRODUCT WORK",
-    text: "FoodFlow, e-commerce builds, booking/rent-a-car demos, internal AI tools dhe custom agent systems. Disa production, disa pilots, disa experiments — krejt te ndertume per me testu ide reale.",
+    text: "FoodFlow, e-commerce, booking demos, internal AI tools dhe custom agent systems.",
     meta: ["NEXT.JS", "APIS", "PWA", "AUTOMATION"],
     accent: "REAL-WORLD BUILDS",
   },
@@ -158,28 +158,48 @@ export default function PortfolioExperience() {
       <main>
         <section className="hero">
           <div className="hero-grid" />
-          <motion.div className="hero-core" style={{ y: coreY, rotate: coreRotate }} aria-hidden>
-            <span/><span/><span/>
+          <motion.div className="hero-photo-wrap" style={{ y: coreY, rotate: coreRotate }}>
+            <div className="hero-photo" />
+            <div className="hero-photo-shade" />
+            <div className="hero-photo-ui" aria-hidden>
+              <span className="ui-corner a" /><span className="ui-corner b" /><span className="ui-corner c" /><span className="ui-corner d" />
+              <div className="hero-ai-mark">AI<span>/</span>01</div>
+              <div className="hero-live mono"><i/> REAL WORLD / REAL BUILDS</div>
+            </div>
           </motion.div>
           <div className="hero-top-meta mono">
             <span>CURRENT_STATUS / BUILDING</span>
-            <span>SYSTEM / ONLINE</span>
+            <span>PRISHTINA / ONLINE</span>
           </div>
           <div className="hero-copy">
             <p className="kicker">HEY, UNE JOM ARI.</p>
             <h1>I BUILD<br/><em>WITH AI.</em></h1>
-            <div className="hero-sub">
-              <p>Founder of <a href="https://agjenti-ai.com" target="_blank" rel="noreferrer">Agjenti AI ↗</a>. Building AI products, automations and systems that actually get used.</p>
-              <div className="mono">PRISHTINA / AI PRODUCTS / AUTOMATION / CONTENT / SHIPPING IN PUBLIC</div>
+            <p className="hero-one-liner">Founder of <a href="https://agjenti-ai.com" target="_blank" rel="noreferrer">Agjenti AI ↗</a> — AI products, automations dhe systems qe punojne ne real life.</p>
+            <div className="hero-actions">
+              <a href="#work" className="primary-cta">SEE WHAT I BUILD <ArrowDown size={15}/></a>
+              <button onClick={() => setAskOpen(true)} className="ghost-cta">ASK ARI ↗</button>
             </div>
           </div>
-          <a className="scroll-cue mono" href="#work">SCROLL TO EXPLORE <ArrowDown size={14}/></a>
+          <div className="hero-proof">
+            <div><span className="mono">FOUNDER</span><strong>AGJENTI AI</strong></div>
+            <div><span className="mono">REMOTE</span><strong>US AI SYSTEMS</strong></div>
+            <div><span className="mono">BUILDING</span><strong>AI PRODUCTS</strong></div>
+            <div><span className="mono">PUBLIC</span><strong>CONTENT + MEDIA</strong></div>
+          </div>
+          <a className="scroll-cue mono" href="#work">SCROLL <ArrowDown size={14}/></a>
         </section>
 
-        <section className="manifesto">
-          <p className="section-label mono">00 / THE POINT</p>
-          <h2>I DON&apos;T JUST<br/>USE AI.<br/><span>I BUILD WITH IT.</span></h2>
-          <p className="manifesto-copy">Ideja osht e thjeshte: AI duhet me bo pune reale. Une e lidh me product thinking, automation, sales, content dhe code — pastaj e testoj jashte demos.</p>
+        <section className="proof-band">
+          <div className="proof-big">
+            <span className="section-label mono">00 / THE POINT</span>
+            <h2>NOT JUST<br/>PROMPTS.<br/><em>PRODUCTS.</em></h2>
+          </div>
+          <div className="proof-bento">
+            <article className="proof-card dark"><span className="mono">01 / BUILD</span><strong>AI AGENTS</strong><small>Conversations → leads → booking.</small></article>
+            <article className="proof-card acid"><span className="mono">02 / AUTOMATE</span><strong>WORKFLOWS</strong><small>Manual process → system.</small></article>
+            <article className="proof-card image"><span className="mono">03 / SHIP</span><strong>REAL USE</strong><small>Test. Break. Fix. Repeat.</small></article>
+            <article className="proof-card paper"><span className="mono">04 / CREATE</span><strong>CONTENT</strong><small>Build in public. Show the process.</small></article>
+          </div>
         </section>
 
         <section className="projects" id="work">
